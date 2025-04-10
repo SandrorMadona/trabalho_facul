@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&family=Libre+Baskerville&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+body {
+    background-color: #1B2029;
+    color: white;
+    font-weight: 500;
+}
+
+
+
+main h1 {
+    color: rgb(101, 148, 160);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: rgb(31, 56, 70);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1vw 2vw 2vw 2vw;
+    border-radius: 5%;
+
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+main form label {
+    display: flex;
+    flex-direction: column;
+}
+
+main form input {
+    background-color: rgb(101, 148, 160);
+    width: 10rem;
+    height: 1.5rem;
+    padding: 0 0.5rem;
+    margin-top: 0.5rem;
+    outline: none;
+    color: rgb(255, 255, 255);
+    border: 1px solid #040B18;
+    border-radius: 8px;
+}
+
+main form input[type="submit"] {
+    cursor: pointer;
+    width: 80%;
+    align-self: center;
+    border: none;
+    border-radius: 32px;
+    transition: all .3s ease-in-out;
+
+}
+
+main form input[type="submit"]:hover {
+    background: rgb(172, 194, 209);
+}
+
+
+/* parte do index */
+.cabecalho {
+    background-color: rgb(101, 148, 160);
+
+}
+
+.images {
+    border: 10px;
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+
+}
+
+.mutavel {
+    display: flex;
+    background-color: rgb(101, 148, 160);
+    border-radius: 8px;
+    justify-content: center;
+}
+
+.images_texto {
+    width: 30px;
+    height: 30px;
+    margin-right: 2rem;
+}
+
+.caixa_maior {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+}

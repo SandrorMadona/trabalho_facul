@@ -5,83 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <Style>
-        .container {
-            display: grid;
-            gap: 5px;
-            grid-template-rows: 3rem auto;
-        }
-
-        .cabecalho {
-            background-color: rgb(128, 182, 182);
-
-        }
-
-        .img_button {
-            border: none;
-            background: none;
-            padding: 0;
-            cursor: pointer;
-
-        }
-
-        .images {
-            border: 2px;
-            width: 50px;
-            height: 50px;
-
-        }
-
-        .images_texto {
-            border: 2px;
-            width: 25px;
-            height: 25px;
-        }
-
-        .meio_da_tela {
-            background-color: rgb(93, 87, 87);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 10px 40px 40px 40px;
-            border-radius: 5%;
-        }
-
-        .treinos {
-            display: grid;
-            grid-template-rows: repeat(3, 2rem);
-            grid-template-columns: 25px auto;
-            gap: 10px
-        }
-
-        .texto {
-            font-size: 1rem;
-        }
-    </Style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
         <div class="cabecalho">
-            <button class="img_button">
+            <a rel="index.html" href="index.html">
                 <img class="images" src="../images/house_button.png" alt="Home_button">
-            </button>
-            <button class="img_button">
-                <img class="images" src="../images/treino_button.png" alt="Treino_button">
-            </button>
+            </a>
+            <a rel="treino.html" href="treino.html">
+                <img class="images" src="../images/treino_button.png" alt="Home_button">
+            </a>
         </div>
-        <div class="meio_da_tela">
-            <h1>Seu treino!</h1>
-            <div class="treinos">
-                <img class="images_texto" src="../images/corredor.png" alt="Home_button">
-                <div class="texto">seu treino corrida</div>
-                <img class="images_texto" src="../images/flexao.png" alt="Home_button">
-                <div class="texto">seu treino flexao</div>
-                <div class="agachamento">img corrida</div>
-                <div class="texto">seu treino agachamento</div>
-            </div>
-        </div>
+        <main class="caixa_maior">
+            <h1 class="Treino">Seu treino!</h1>
+            <label for="dados_titulo">
+                <img class="images_texto" src="../images/corredor.png" alt="corredor">
+                <span>seu treino corrida</span>
+            </label>
+            <label for="dados_titulo">
+                <img class="images_texto" src="../images/flexao.png" alt="flexao">
+                <span>seu treino flexao</span>
+            </label>
+            <label for="dados_titulo">
+                <img class="images_texto" src="../images/flexao.png" alt="flexao">
+                <span>seu treino agachamento</span>
+            </label>
+        </main>
+
     </div>
 </body>
 
