@@ -92,6 +92,11 @@ main form input {
     /* Borda sutil */
     border-radius: 8px;
     /* Bordas arredondadas */
+    width: 80%;
+    /* Largura relativa ao container */
+    align-self: center;
+    /* Centraliza o input horizontalmente */
+
 }
 
 /* Estilos específicos para botão de submit */
@@ -334,6 +339,41 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    /* Organiza os botões em uma coluna */
+    align-items: center;
+    /* Centraliza os botões no eixo horizontal */
+    justify-content: center;
+    /* Centraliza os botões no eixo vertical, se necessário */
+    width: 100%;
+    /* Faz a largura do container ocupar toda a largura disponível */
+    text-align: center;
+    /* Centraliza o texto dentro dos botões */
+}
+
+.botao {
+    background-color: rgb(101, 148, 160);
+    width: 10rem;
+    height: 1.5rem;
+    padding: 0 0.5rem;
+    margin-top: 0.5rem;
+    outline: none;
+    color: rgb(255, 255, 255);
+    border: 1px solid #040B18;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 80%;
+    align-self: center;
+    border: none;
+    border-radius: 32px;
+    transition: all .3s ease-in-out;
+    font-family: Poppins, sans-serif;
+    font-size: 13px;
+    /* Adicionando a fonte Poppins (ou qualquer outra que você use na página) */
 }
 
 
