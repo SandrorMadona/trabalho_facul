@@ -280,6 +280,7 @@ nav {
     .mobile-menu {
         display: block;
     }
+
 }
 
 /* Classe ativa para mostrar o menu mobile */
@@ -319,4 +320,24 @@ nav {
 .mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -7px);
     /* Rotaciona terceira linha */
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1B2029;
+    z-index: 999;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+header {
+    position: relative;
+    z-index: 10;
 }
