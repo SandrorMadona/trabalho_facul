@@ -1,39 +1,84 @@
 <!DOCTYPE html>
+<!-- Declaração do tipo de documento como HTML5 -->
 <html lang="en">
+<!-- Elemento raiz do documento com definição de idioma (inglês) -->
 
 <head>
+    <!-- Cabeçalho do documento - contém metadados e links para recursos externos -->
     <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 (suporta caracteres especiais e acentos) -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configuração da viewport para layout responsivo em dispositivos móveis -->
+
     <title>Document</title>
+    <!-- Título da página exibido na aba do navegador (deveria ser mais descritivo) -->
+
     <link rel="stylesheet" href="style.css">
+    <!-- Link para o arquivo CSS externo que contém os estilos da página -->
 </head>
 
 <body>
+    <!-- Corpo do documento - contém todo o conteúdo visível da página -->
     <div class="container">
-        <div class="cabecalho">
-            <a rel="index.html" href="../index.html">
-                <img class="images" src="../images/house_button.png" alt="Home_button">
-            </a>
-            <a rel="treino.html" href="treino.html">
-                <img class="images" src="../images/treino_button.png" alt="Home_button">
-            </a>
-        </div>
+        <!-- Container principal que envolve todo o conteúdo da página -->
+
+        <header>
+            <!-- Cabeçalho da página - normalmente contém logotipo e menu de navegação -->
+            <nav>
+                <!-- Elemento de navegação principal -->
+                <a class="logo" href="/">Trabalho</a>
+                <!-- Logotipo clicável que redireciona para a página inicial (root) -->
+
+                <!-- Menu Hamburguer para versão mobile -->
+                <div class="mobile-menu">
+                    <div class="line1"></div> <!-- Primeira linha do ícone hamburguer -->
+                    <div class="line2"></div> <!-- Segunda linha do ícone hamburguer -->
+                    <div class="line3"></div> <!-- Terceira linha do ícone hamburguer -->
+                </div>
+
+                <!-- Lista de navegação principal -->
+                <ul class="nav-list">
+                    <li><a href="home.html">Home</a></li> <!-- Item do menu: Home -->
+                    <li><a href="treino.html">Treino</a></li> <!-- Item do menu: Treino -->
+                    <li><a href="/">Sair</a></li> <!-- Item do menu: Sair (retorna à raiz) -->
+                </ul>
+            </nav>
+        </header>
+
         <main class="caixa_maior">
+            <!-- Conteúdo principal da página - classe 'caixa_maior' para estilização -->
             <h1 class="Treino">Seu treino!</h1>
+            <!-- Título principal da página - classe 'Treino' para estilização específica -->
+
+            <!-- Bloco de treino de corrida -->
             <label for="dados_titulo">
+                <!-- Elemento label associado a um input (não visível neste código) -->
                 <img class="images_texto" src="../images/corredor.png" alt="corredor">
+                <!-- Ícone ilustrativo para corrida -->
                 <span>seu treino corrida</span>
+                <!-- Descrição do treino -->
             </label>
+
+            <!-- Bloco de treino de flexão -->
             <label for="dados_titulo">
                 <img class="images_texto" src="../images/flexao.png" alt="flexao">
+                <!-- Ícone ilustrativo para flexão -->
                 <span>seu treino flexao</span>
+                <!-- Descrição do treino -->
             </label>
+
+            <!-- Bloco de treino de agachamento -->
             <label for="dados_titulo">
                 <img class="images_texto" src="../images/flexao.png" alt="flexao">
+                <!-- Ícone ilustrativo (reutilizado de flexão) -->
                 <span>seu treino agachamento</span>
+                <!-- Descrição do treino -->
             </label>
         </main>
 
+        <!-- Inclusão do script JavaScript para funcionalidades do menu mobile -->
+        <script src="mobile-navbar.js"></script>
     </div>
 </body>
 

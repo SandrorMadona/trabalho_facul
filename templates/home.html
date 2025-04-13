@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento HTML5 -->
+<html lang="pt">
+<!-- Elemento raiz do documento com atributo de idioma (inglês) -->
+
+<head>
+    <!-- Cabeçalho do documento - contém metadados e links para recursos externos -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para responsividade em dispositivos móveis -->
+
+    <title>Plano de Treino</title> <!-- Título da página exibido na aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS externo -->
+</head>
+
+<body>
+    <!-- Corpo do documento - todo o conteúdo visível da página -->
+    <div class="container">
+        <!-- Container principal que envolve todo o conteúdo -->
+
+        <header>
+            <!-- Cabeçalho da página - normalmente contém logotipo e navegação -->
+            <nav>
+                <!-- Barra de navegação principal -->
+                <a class="logo" href="/">Trabalho</a>
+                <!-- Logotipo/link para a página inicial -->
+
+                <!-- Menu mobile (hamburguer) -->
+                <div class="mobile-menu">
+                    <div class="line1"></div> <!-- Linha 1 do ícone hamburguer -->
+                    <div class="line2"></div> <!-- Linha 2 do ícone hamburguer -->
+                    <div class="line3"></div> <!-- Linha 3 do ícone hamburguer -->
+                </div>
+
+                <!-- Lista de itens de navegação -->
+                <ul class="nav-list">
+                    <li><a href="home.html">Home</a></li> <!-- Item do menu: Home -->
+                    <li><a href="treino.html">Treino</a></li> <!-- Item do menu: Treino -->
+                    <li><a href="/">Sair</a></li> <!-- Item do menu: Sair -->
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Conteúdo principal da página -->
+            <h1>Nome da pessoa</h1> <!-- Título principal da página -->
+
+            <!-- Seção de informações do usuário -->
+            <label for="dados_titulo">
+                <span>Nome:</span> <!-- Rótulo do campo -->
+                <span class="mutavel">Nome texto</span> <!-- Valor dinâmico (será preenchido via JS) -->
+            </label>
+
+            <label for="dados_titulo">
+                <span>Idade:</span>
+                <span class="mutavel">idade texto</span>
+            </label>
+
+            <label for="dados_titulo">
+                <span>Peso inicial:</span>
+                <span class="mutavel">peso inicial texto</span>
+            </label>
+
+            <label for="dados_titulo">
+                <span>Peso atual:</span>
+                <span class="mutavel">peso inicial texto</span>
+            </label>
+
+            <label for="dados_titulo">
+                <span>Nivel de treino atual:</span>
+                <span class="mutavel">classe de treino atual</span>
+            </label>
+        </main>
+
+        <!-- Script JavaScript para funcionalidade do menu mobile -->
+        <script src="mobile-navbar.js"></script>
+    </div>
+</body>
+
+</html>
