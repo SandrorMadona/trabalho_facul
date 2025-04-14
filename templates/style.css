@@ -1,330 +1,207 @@
-/* Importação de fontes do Google Fonts */
+/* ========== IMPORTAÇÃO DE FONTES ========== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&family=Libre+Baskerville&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* Reset CSS e estilos globais */
+/* ========== RESET E ESTILOS GLOBAIS ========== */
 * {
     margin: 0;
-    /* Remove todas as margens padrão */
     padding: 0;
-    /* Remove todos os paddings padrão */
     border: 0;
-    /* Remove todas as bordas padrão */
     box-sizing: border-box;
-    /* Faz padding e border serem incluídos na largura/altura */
-    font-family: Poppins;
-    /* Define a fonte padrão para todo o site */
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Estilos do corpo da página */
+/* ========== ESTRUTURA BASE ========== */
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: #1B2029;
-    /* Cor de fundo escura */
     color: white;
-    /* Cor do texto principal */
     font-weight: 500;
-    /* Peso da fonte padrão */
 }
 
-/* ========== ESTILOS DA ÁREA PRINCIPAL (MAIN) ========== */
-
-/* Estilo para títulos h1 dentro da main */
-main h1 {
-    color: rgb(101, 148, 160);
-    /* Cor azul-esverdeada para títulos */
+header {
+    position: relative;
+    z-index: 10;
 }
 
-/* Container principal centralizado */
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 8vh);
+    /* Ajusta altura considerando o header */
+}
+
+/* ========== MAIN (ÁREA PRINCIPAL) ========== */
 main {
     display: flex;
     flex-direction: column;
-    /* Organiza os elementos em coluna */
     gap: 1rem;
-    /* Espaçamento entre elementos filhos */
     background-color: rgb(31, 56, 70);
-    /* Cor de fundo azul escuro */
-    position: absolute;
-    /* Permite centralização precisa */
-    top: 50%;
-    /* Posiciona no meio verticalmente */
-    left: 50%;
-    /* Posiciona no meio horizontalmente */
-    transform: translate(-50%, -50%);
-    /* Ajuste fino para centralização perfeita */
+    max-width: 400px;
     padding: 1vw 2vw 2vw 2vw;
-    /* Espaçamento interno responsivo */
     border-radius: 5%;
-    /* Bordas levemente arredondadas */
 }
 
-/* Estilos para formulários dentro da main */
+main h1 {
+    color: rgb(101, 148, 160);
+}
+
+/* ========== FORMULÁRIO ========== */
 main form {
     display: flex;
     flex-direction: column;
-    /* Organiza os campos em coluna */
     gap: 1rem;
-    /* Espaçamento entre elementos do formulário */
 }
 
-/* Estilos para labels do formulário */
 main form label {
     display: flex;
     flex-direction: column;
-    /* Empilha label e input verticalmente */
 }
 
-/* Estilos básicos para inputs */
 main form input {
     background-color: rgb(101, 148, 160);
-    /* Cor de fundo azul-esverdeada */
-    width: 10rem;
-    /* Largura fixa */
-    height: 1.5rem;
-    /* Altura fixa */
-    padding: 0 0.5rem;
-    /* Espaçamento interno horizontal */
-    margin-top: 0.5rem;
-    /* Margem superior para separar do label */
-    outline: none;
-    /* Remove o contorno padrão ao focar */
-    color: rgb(255, 255, 255);
-    /* Cor do texto branco */
-    border: 1px solid #040B18;
-    /* Borda sutil */
-    border-radius: 8px;
-    /* Bordas arredondadas */
     width: 80%;
-    /* Largura relativa ao container */
+    height: 1.5rem;
+    padding: 0 0.5rem;
+    margin-top: 0.5rem;
+    outline: none;
+    color: white;
+    border: 1px solid #040B18;
+    border-radius: 8px;
     align-self: center;
-    /* Centraliza o input horizontalmente */
-
 }
 
-/* Estilos específicos para botão de submit */
 main form input[type="submit"] {
     cursor: pointer;
-    /* Muda cursor para indicar elemento clicável */
-    width: 80%;
-    /* Largura relativa ao container */
-    align-self: center;
-    /* Centraliza o botão horizontalmente */
     border: none;
-    /* Remove borda padrão */
     border-radius: 32px;
-    /* Bordas completamente arredondadas */
     transition: all .3s ease-in-out;
-    /* Transição suave para efeitos hover */
 }
 
-/* Efeito hover para o botão de submit */
 main form input[type="submit"]:hover {
     background: rgb(172, 194, 209);
-    /* Muda cor de fundo ao passar o mouse */
 }
 
-/* ========== ESTILOS DO HEADER E NAVEGAÇÃO ========== */
-
-
-/* Estilo para imagens genéricas */
-.images {
-    border: 10px;
-    /* Borda (valor parece estar incompleto) */
-    width: 50px;
-    /* Largura fixa */
-    height: 50px;
-    /* Altura fixa */
-    margin-right: 1rem;
-    /* Margem à direita para espaçamento */
-}
-
-/* Container flexível mutável */
-.mutavel {
+/* ========== BOTÕES ========== */
+.botoes {
     display: flex;
-    background-color: rgb(101, 148, 160);
-    /* Cor azul-esverdeada */
-    border-radius: 8px;
-    /* Bordas levemente arredondadas */
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    /* Centraliza conteúdo horizontalmente */
+    width: 100%;
+    text-align: center;
 }
 
-/* Estilo para imagens com texto */
-.images_texto {
-    width: 30px;
-    /* Largura menor que imagens normais */
-    height: 30px;
-    /* Altura menor que imagens normais */
-    margin-right: 2rem;
-    /* Margem maior à direita */
+.botao {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    background-color: rgb(101, 148, 160);
+    width: 80%;
+    height: 1.5rem;
+    padding: 0 0.5rem;
+    margin-top: 0.5rem;
+    outline: none;
+    color: white;
+    border: none;
+    border-radius: 32px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    font-size: 13px;
 }
 
-/* Container principal para conteúdo */
-.caixa_maior {
-    width: 90%;
-    /* Largura relativa ao container pai */
-    max-width: 500px;
-    /* Largura máxima para telas grandes */
-    margin: 0 auto;
-    /* Centraliza horizontalmente */
-    padding: 30px;
-    /* Espaçamento interno generoso */
+.botao:hover {
+    background: rgb(172, 194, 209)
 }
 
-/* Estilos básicos para links */
-a {
-    color: #ffff;
-    /* Cor do texto branco */
-    text-decoration: none;
-    /* Remove sublinhado padrão */
-    transition: .3s;
-    /* Transição suave para efeitos hover */
-}
-
-/* Efeito hover para links */
-a:hover {
-    opacity: 0.7;
-    /* Reduz opacidade ao passar o mouse */
-}
-
-/* Barra de navegação principal */
+/* ========== NAVEGAÇÃO ========== */
 nav {
     display: flex;
     justify-content: space-around;
-    /* Distribui espaço entre itens */
     align-items: center;
-    /* Centraliza verticalmente */
     background-color: rgb(101, 148, 160);
-    /* Cor azul-esverdeada */
     height: 8vh;
-    /* Altura relativa à viewport */
 }
 
-/* Lista de navegação */
 .nav-list {
     list-style: none;
-    /* Remove marcadores de lista */
     display: flex;
-    /* Layout flexível para itens lado a lado */
 }
 
-/* Itens da lista de navegação */
 .nav-list li {
     letter-spacing: 3px;
-    /* Aumenta espaçamento entre letras */
     margin-left: 32px;
-    /* Margem entre itens do menu */
 }
 
-/* Menu mobile (hamburguer) - inicialmente escondido */
+a {
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* ========== MENU MOBILE ========== */
 .mobile-menu {
     display: none;
-    /* Não mostra em telas grandes */
     cursor: pointer;
-    /* Muda cursor para indicar clicável */
 }
 
-/* Linhas do menu hamburguer */
 .mobile-menu div {
     width: 32px;
-    /* Largura das linhas */
     height: 2px;
-    /* Altura das linhas */
-    background: #fff;
-    /* Cor branca */
+    background: white;
     margin: 8px;
-    /* Espaçamento entre linhas */
     transition: 0.3s;
-    /* Transição suave para animação */
 }
 
-/* ========== MEDIA QUERIES PARA DISPOSITIVOS MÓVEIS ========== */
-
-@media (max-width: 999px) {
-
-    /* Previne scroll horizontal indesejado */
-    body {
-        overflow-x: hidden;
-    }
-
-    /* Estilos para a lista de navegação em mobile */
-    .nav-list {
-        position: absolute;
-        /* Posicionamento absoluto sobre outros elementos */
-        top: 8vh;
-        /* Posiciona logo abaixo do header */
-        right: 0;
-        /* Alinha à direita */
-        width: 50vw;
-        /* Largura relativa à viewport */
-        height: 92vh;
-        /* Altura relativa à viewport */
-        background-color: #23232e;
-        /* Cor de fundo escura */
-        flex-direction: column;
-        /* Itens em coluna */
-        align-items: center;
-        /* Centraliza horizontalmente */
-        justify-content: space-around;
-        /* Distribui espaço verticalmente */
-        transform: translateX(100%);
-        /* Esconde o menu fora da tela */
-        transition: transform .3s ease-in;
-        /* Animação suave de entrada/saída */
-    }
-
-    /* Itens do menu mobile */
-    .nav-list li {
-        margin-left: 0;
-        /* Remove margem esquerda */
-        opacity: 0;
-        /* Inicialmente transparente */
-        transition: opacity 0.5s ease;
-        /* Transição suave para opacidade */
-    }
-
-    /* Mostra o botão do menu mobile */
-    .mobile-menu {
-        display: block;
-    }
-
-}
-
-/* Classe ativa para mostrar o menu mobile */
 .nav-list.active {
     transform: translateX(0);
-    /* Traz o menu para dentro da tela */
 }
 
-/* Animação para os links do menu mobile */
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        /* Inicia transparente */
-        transform: translateX(50px);
-        /* Inicia deslocado para direita */
-    }
-
-    to {
-        opacity: 1;
-        /* Termina totalmente visível */
-        transform: translateX(0);
-        /* Termina na posição normal */
-    }
-}
-
-/* Transformações para criar o "X" no menu hamburguer quando ativo */
 .mobile-menu.active .line1 {
     transform: rotate(-45deg) translate(-8px, 8px);
-    /* Rotaciona primeira linha */
 }
 
 .mobile-menu.active .line2 {
     opacity: 0;
-    /* Esconde a linha do meio */
 }
 
 .mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -7px);
-    /* Rotaciona terceira linha */
+}
+
+/* ========== CONTEÚDO ADICIONAL ========== */
+.images {
+    border: 10px;
+    /* Este valor parece estar incompleto */
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+}
+
+.images_texto {
+    width: 30px;
+    height: 30px;
+    margin-right: 2rem;
+}
+
+.mutavel {
+    display: flex;
+    background-color: rgb(101, 148, 160);
+    border-radius: 8px;
+    justify-content: center;
+}
+
+.caixa_maior {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
 }
 
 .navigation {
@@ -341,43 +218,46 @@ nav {
     gap: 2rem;
 }
 
-.botoes {
-    display: flex;
-    flex-direction: column;
-    /* Organiza os botões em uma coluna */
-    align-items: center;
-    /* Centraliza os botões no eixo horizontal */
-    justify-content: center;
-    /* Centraliza os botões no eixo vertical, se necessário */
-    width: 100%;
-    /* Faz a largura do container ocupar toda a largura disponível */
-    text-align: center;
-    /* Centraliza o texto dentro dos botões */
+/* ========== ANIMAÇÕES ========== */
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-.botao {
-    background-color: rgb(101, 148, 160);
-    width: 10rem;
-    height: 1.5rem;
-    padding: 0 0.5rem;
-    margin-top: 0.5rem;
-    outline: none;
-    color: rgb(255, 255, 255);
-    border: 1px solid #040B18;
-    border-radius: 8px;
-    cursor: pointer;
-    width: 80%;
-    align-self: center;
-    border: none;
-    border-radius: 32px;
-    transition: all .3s ease-in-out;
-    font-family: Poppins, sans-serif;
-    font-size: 13px;
-    /* Adicionando a fonte Poppins (ou qualquer outra que você use na página) */
-}
+/* ========== MEDIA QUERIES (RESPONSIVO) ========== */
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
 
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background-color: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform .3s ease-in;
+    }
 
-header {
-    position: relative;
-    z-index: 10;
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
 }
